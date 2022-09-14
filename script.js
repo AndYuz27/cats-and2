@@ -17,10 +17,16 @@ const getCats = function(){ //IIFE
             if(el.id && el.name) {
 
 let card = `
-    <div class="card" ">
+    <div class="card">
     <div class="card-img" style="${el.img_link && `background-image: url(${el.img_link})`}"></div>
         <h4>${el.name}</h4>
-        <h5></h5>
+        <br>
+        <span>Возраст ${el.age} лет/года</span>
+        <br>
+        <span>${el.rate}/10</span>
+        <span>ID: ${el.id}</span>
+        <p>${el.description}</p>
+        <br>
     </div>`;
 box.innerHTML += card;
 
@@ -58,7 +64,7 @@ form.addEventListener("submit", (e) => {
         console.log(data)
         if(data.message === "ok"){
             box.innerHTML = ""
-            getCats();
+            alert('кот добавлен')
         }
     })
 })
