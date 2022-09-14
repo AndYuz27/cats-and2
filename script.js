@@ -10,7 +10,7 @@
 const box = document.querySelector(".container");
 
 const getCats = function(){ //IIFE
-    fetch(" http://sb-cats.herokuapp.com/api/2/andy1337/show")
+    fetch(" https://sb-cats.herokuapp.com/api/2/andy1337/show")
     .then(res => res.json())
     .then(data => {
         data.data.forEach(el => {
